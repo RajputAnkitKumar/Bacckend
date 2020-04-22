@@ -1,0 +1,23 @@
+
+<%- include("partials/header") %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit <%= blog.title %></div>
+    <form class="ui form" action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
+		<!--we use this because HTML cant take [put] request. So need to force it .So for that we use [?_method=PUT"] And + also we need to install [npm install method-override --save]-->
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[title]" value="<%= blog.title %>"> <!--by giving value here we can update -->
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="blog[image]" value="<%= blog.image %>">
+        </div>
+        <div class="field">
+            <label>Blog Content</label>
+			<!--blog[body]:>this is a object and it will easily send data to checkout post request by [req.body.blog]-->
+            <textarea name="blog[body]"><%= blog.body %></textarea>
+        </div>
+        <input class="ui violet big basic button" type="submit">
+    </form>
+</div>
+<%- include("partials/footer") %>

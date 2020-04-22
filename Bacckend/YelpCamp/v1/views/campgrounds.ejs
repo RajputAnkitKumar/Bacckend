@@ -1,0 +1,30 @@
+
+  
+<%- include("partials/header") %>
+
+ <div class="container">
+     <header class="jumbotron">    <!--header is also like a div (container)-->
+         <div class="container">   <!--comment it and resize the page (see what happened)-->
+             <h1>Welcome To YelpCamp!</h1>
+             <p>View our hand-picked campgrounds from all over the world</p>
+             <p>
+                <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a>
+             </p>
+         </div>
+     </header>
+<!--( style="display:flex; flex-wrap: wrap;")remove this and see what happened AND also tried to REMOVE text-center and see what happened-->    
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% campgrounds.forEach(function(campground){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">  <!--some class of bootstrap & used for image & try to comment it -->
+                   <img src="<%= campground.image %>">
+                   <div class="caption">  <!--some class of bootstrap & used for text & try comment it -->
+                       <h4><%= campground.name %></h4>
+                   </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<%- include("partials/footer") %>

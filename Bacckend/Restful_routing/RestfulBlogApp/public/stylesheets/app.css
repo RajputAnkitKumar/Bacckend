@@ -1,0 +1,14 @@
+  
+i.icon {             /* icon has class of icon*/
+    font-size: 2em;
+}
+
+.container.main { /*se  screenshot y will get and Actually 
+	we have 2 container inside menue(navbar)
+	do 1 thing  try to use [container{}]*/
+    margin-top: 7.0em;
+}
+
+#delete {
+    display: inline; /*button that make edit-botton and delete-button inline */
+}

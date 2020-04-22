@@ -1,0 +1,18 @@
+<%- include ("partials/header") %>
+<!--         It is a bad idea becoz we need to write this again and again
+<style>           
+body {
+	background:yellow;
+	color:blue;
+}
+</style>
+-->
+
+<link rel="stylesheet" href="/app.css"> <!--for like view file ,Express search by itself
+.But for css file It will not gonna search . So we set condition in app.js file
+ok [app.use(express.static("public"))]-->
+<h1>This is the home page!</h1>
+
+<img src="http://www.pomsky.org/wp-content/uploads/2013/03/f14629e88cfe11e28ef622000a1fa434_7.jpg">ls
+
+<%- include ("partials/footer") %>
